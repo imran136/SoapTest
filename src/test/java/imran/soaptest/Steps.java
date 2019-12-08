@@ -1,3 +1,5 @@
+package imran.soaptest;
+
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -22,13 +24,13 @@ public class Steps {
 
     @When("^we invoke the webservice$")
     public void we_invoke_the_webservice() throws Throwable {
-        strActualResponse = countryInfoServiceSoapType.capitalCity("NL");
+        strActualResponse = countryInfoServiceSoapType.capitalCity("IN");
     }
 
     @Then("^we expect response$")
     public void we_expect_response() throws Throwable {
         System.out.println(strActualResponse);
-        strExpectedResponse = "Amsterdam";
+        strExpectedResponse = "New Delhi";
         assertEquals(strActualResponse, strExpectedResponse);
     }
 }
